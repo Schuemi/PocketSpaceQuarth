@@ -83,7 +83,7 @@ void DashBoard::reset() {
     m_itemsCount = 2;
     FakeEEPROM EEPROM;
     EEPROM.get(EEPROM_GAME_MODE_BYTE + EEPROM_STORAGE_SPACE_START, gameControl.gameMode);
-    if (gameControl.gameMode > GAME_MODE_HARD) gameControl.gameMode = GAME_MODE_EASY;
+    if (gameControl.gameMode > GAME_MODE_HARD || gameControl.gameMode < GAME_MODE_EASY) gameControl.gameMode = GAME_MODE_EASY;
            
     //if (EEPROM.read(EEPROM_GAME_CLEARED_BYTE + EEPROM_STORAGE_SPACE_START) == 0x32) m_itemsCount = 4;
     
