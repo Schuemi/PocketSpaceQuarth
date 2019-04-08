@@ -69,6 +69,7 @@ void Highscore::loadListEEPROM() {
                 m_highscoreList[i].score = 0;
 
             }
+            m_highscoreLoaded = true;
             saveListEEPROM();
         }
         m_highscoreLoaded = true;
